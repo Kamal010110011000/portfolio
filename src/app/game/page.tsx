@@ -1,8 +1,11 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { Audio, AudioListener, AudioLoader } from 'three';
 import * as THREE from 'three';
 import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockControls.js';
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const InteractiveHallway = () => {
   const mountRef: any = useRef(null);
@@ -19,7 +22,7 @@ const InteractiveHallway = () => {
       mountRef.current.appendChild(renderer.domElement);
     }
 
-    let userHealth = 5;
+    let userHealth = 100;
     const enemyHealth = 3;
     // Camera initial position
     camera.position.set(0, 2, 5); // Eye level
@@ -32,7 +35,7 @@ const InteractiveHallway = () => {
     });
 
     // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
     scene.add(ambientLight);
 
     const spotlight = new THREE.SpotLight(0xffaa00, 1, 100, Math.PI / 4, 0.5);
@@ -45,6 +48,10 @@ const InteractiveHallway = () => {
     const flickerLight = () => {
       spotlight.intensity = 0.5 + Math.random() * 0.5; // Random intensity between 0.5 and 1
     };
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    directionalLight.position.set(0, 5, 0);
+    scene.add(directionalLight);
 
     // Textures
     const textureLoader = new THREE.TextureLoader();
@@ -193,38 +200,150 @@ const InteractiveHallway = () => {
       forward: Infinity,
       backward: -hallwayDepth,
     };
+    // FBX Loader
+    const loader = new FBXLoader();
+    const gltfLoader = new GLTFLoader();
+    // Load the Texture
+    const diffuseTexture = textureLoader.load('/texture/kenney_animated-characters-3/Skins/zombieMaleA.png'); // Diffuse (color) texture
+    const normalTexture = textureLoader.load('/texture/kenney_animated-characters-3/Skins/humanMaleA.png');  // Optional normal map
+
+    // Audio
+    const listener = new AudioListener();
+    camera.add(listener);
+
+    const audioLoader = new AudioLoader();
+    const mixers: any = []; // Array to hold AnimationMixers
+    // Load Enemy Model
+    // let enemyModel: any = null;
+    // gltfLoader.load('/texture/Rampaging-T-Rex.glb', (fbx: any) => {
+    //   // console.log('Model Loaded:', fbx);
+    //   enemyModel = fbx;
+    //   // console.log(enemyModel, 'enemyModel');
+    //   // enemyModel.scale.set(0.002, 0.002, 0.002); // Scale down the model (adjust as needed)
+    //   enemyModel.scale.set(0.005, 0.005, 0.005); // Try different scale values
+    //   const mixer = new THREE.AnimationMixer(enemyModel);
+  
+    //   if(enemyModel.animations.length > 0){
+    //     const action = mixer.clipAction(enemyModel.animations[0]);
+    //     action.play();
+    //   }
+    //   mixers.push(mixer);
+
+    //   // Optional: Check the bounding box to ensure proper scaling
+    //   // const box = new THREE.Box3().setFromObject(enemyModel);
+    //   // console.log('Model Bounding Box:', box.getSize(new THREE.Vector3())); // Log the size
+    //   enemyModel.traverse((child: any) => {
+    //     // console.log(child, 'test')
+    //     if (child.isMesh) {
+    //       // console.log('child', child);
+    //       child.castShadow = true;
+    //       child.receiveShadow = true;
+    //       // child.material = new THREE.MeshStandardMaterial({ color: 0xfffff }); // Use a basic material for testing
+
+    //       // Apply textures to the material
+    //       // child.material.map = diffuseTexture; // Apply the diffuse texture
+    //       // child.material.normalMap = normalTexture; // Optional: Apply a normal map
+    //       child.material.needsUpdate = true;
+    //     }
+    //   });
+    // });
     // Enemies
     const enemies: any = [];
-    const enemyMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
+    //  const spawnEnemy = () => {
+    //   console.log('spawnEnemy', enemyModel);
+    //   if (!enemyModel) return; // Ensure the model is loaded
 
-    const spawnEnemy = () => {
-      const enemyGeometry = new THREE.SphereGeometry(0.5, 16, 16);
-      const enemy = new THREE.Mesh(enemyGeometry, enemyMaterial);
+    //   const enemy = enemyModel.scenes?.[0]?.clone();
+    //   // enemy.position.set(0, 1, -10); // Place the enemy in front of the camera
 
-      // Random spawn position
-      const x = (Math.random() - 0.5) * hallwayWidth;
-      const y = 1; // Ground level
-      const z = -Math.random() * 40 - 20;
-
-      enemy.position.set(x, y, z);
-      scene.add(enemy);
-
-      enemies.push({ enemy, health: enemyHealth });
-    };
-
-    // Spawn 5 enemies initially
-    for (let i = 0; i < 5; i++) {
-      spawnEnemy();
-    }
+    //   enemy.position.set(
+    //     (Math.random() - 0.5) * hallwayWidth, // Random x position
+    //     1, // Ground level
+    //     -Math.random() * 40 - 20 // Random z position
+    //   );
+    //   scene.add(enemy);
+    //   enemies.push({ enemy, health: enemyHealth });
+    // };
 
     // Game Logic: Check Collisions and Update
-    const checkCollisions = () => {
+
+     // Function to spawn an enemy
+    const spawnEnemy = () => {
+      gltfLoader.load('/texture/Rampaging-T-Rex.glb', (gltf) => {
+        const enemyModel = gltf.scene;
+
+        // Scale and randomize position
+        enemyModel.scale.set(0.5, 0.5, 0.5);
+        enemyModel.position.set(
+        (Math.random() - 0.5) * hallwayWidth -1, // Random x position
+        1, // Ground level
+        -Math.random() * 40 - 20 // Random z position
+        ); // Random x-position, far back z-position
+
+      enemyModel.traverse((child: any) => {
+        if (child.isMesh) {
+          // console.log('child', child);
+          child.castShadow = true;
+          child.receiveShadow = true;
+          // child.material = new THREE.MeshStandardMaterial({ color: 0xfffff }); // Use a basic material for testing
+
+          // Apply textures to the material
+          // child.material.map = diffuseTexture; // Apply the diffuse texture
+          // child.material.normalMap = normalTexture; // Optional: Apply a normal map
+          child.material.needsUpdate = true;
+        }
+      });
+        // Animation mixer for this enemy
+        const mixer = new THREE.AnimationMixer(enemyModel);
+
+        if (gltf.animations.length > 0) {
+          const action = mixer.clipAction(gltf.animations[0]); // Assume first animation is the running animation
+          action.play();
+        }
+         // Load and attach footstep sound
+        const footstepSound = new Audio(listener);
+        audioLoader.load('/public/texture/515783_6142149-lq.mp3', (buffer) => {
+          footstepSound.setBuffer(buffer);
+          footstepSound.setLoop(false); // Play sound only once per footstep
+          footstepSound.setVolume(0.5);
+        });
+
+        // Play footsteps at intervals based on animation speed
+        const footstepInterval = 0.5; // Adjust interval to sync with animation (in seconds)
+        let timeSinceLastStep = 0;
+
+        enemies.push({ 
+          enemy: enemyModel, 
+          mixer, 
+          health: enemyHealth,
+          footstepSound,
+          playFootsteps: (delta: any) => {
+            timeSinceLastStep += delta;
+            console.log(footstepInterval, timeSinceLastStep, 'footstepInterval, timeSinceLastStep');
+            // if (timeSinceLastStep >= footstepInterval) {
+              if (footstepSound.isPlaying) footstepSound.stop();
+              footstepSound.play();
+              timeSinceLastStep = 0;
+            }
+          // },
+         });
+        scene.add(enemyModel);
+        mixers.push(mixer);
+      });
+    };
+    // Spawn 5 enemies initially
+    const interval = setInterval(() => {
+      if (enemies.length < 1) spawnEnemy();
+    }, 3000);
+
+
+    const checkCollisions = (dalta: any) => {
       enemies.forEach((data: any, index: any) => {
-        const { enemy, health } = data;
+        const { enemy, health, playFootsteps } = data;
 
         // Enemy moving toward the camera
         enemy.position.z += 0.1;
-
+        playFootsteps(dalta); // Play footstep sound at intervals
         // Check if the enemy touches the user
         if (enemy.position.z > camera.position.z - 1) {
           userHealth--;
@@ -241,7 +360,8 @@ const InteractiveHallway = () => {
 
         // Check if laser hits the enemy
         lasers.forEach((laser: any, laserIndex: any) => {
-          if (laser.laser.position.distanceTo(enemy.position) < 1) {
+          // console.log(laser.laser.position, enemy.position, 'laserPosition, enemyPosition', laser.laser.position.distanceTo(enemy.position));
+          if (laser.laser.position.distanceTo(enemy.position) < 5) {
             data.health--;
             console.log(`Enemy hit! Health: ${data.health}`);
             scene.remove(laser.laser);
@@ -268,6 +388,9 @@ const InteractiveHallway = () => {
     document.addEventListener('keyup', (e) => {
       if (keys.hasOwnProperty(e.code)) keys[e.code] = false;
     });
+
+    // Animate Function
+    const clock = new THREE.Clock();
 
     const animate = () => {
       if(gameOver) return;
@@ -336,7 +459,11 @@ const InteractiveHallway = () => {
       // Flickering light
       flickerLight();
 
-      checkCollisions();
+
+      // Update mixers
+      const delta = clock.getDelta();
+      mixers.forEach((mixer: any) => mixer.update(delta));
+      checkCollisions(delta);
 
       renderer.render(scene, camera);
     };
