@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockControls.js';
-import { cameraPosition } from 'three/tsl';
 
 const InteractiveHallway = () => {
   const mountRef: any = useRef(null);
@@ -21,7 +20,7 @@ const InteractiveHallway = () => {
     }
 
     let userHealth = 5;
-    let enemyHealth = 3;
+    const enemyHealth = 3;
     // Camera initial position
     camera.position.set(0, 2, 5); // Eye level
 
