@@ -1,0 +1,938 @@
+{
+  "id": 31588,
+  "accountNo": "000031588",
+  "externalId": "6585",
+  "status": {
+    "id": 100,
+    "code": "loanStatusType.submitted.and.pending.approval",
+    "value": "Submitted and pending approval",
+    "pendingApproval": true,
+    "waitingForDisbursal": false,
+    "active": false,
+    "closedObligationsMet": false,
+    "closedWrittenOff": false,
+    "closedRescheduled": false,
+    "closed": false,
+    "overpaid": false,
+    "transferInProgress": false,
+    "transferOnHold": false,
+    "underTransfer": false
+  },
+  "clientId": 27197,
+  "clientAccountNo": "000027197",
+  "clientName": "Kamal Singh",
+  "clientOfficeId": 1,
+  "loanProductId": 11,
+  "loanProductName": "Personal Loan",
+  "loanProductDescription": "PL",
+  "isLoanProductLinkedToFloatingRate": false,
+  "loanType": {
+    "id": 1,
+    "code": "accountType.individual",
+    "value": "Individual"
+  },
+  "weeksInYearType": {
+    "id": 1,
+    "code": "52",
+    "value": "52"
+  },
+  "currency": {
+    "code": "INR",
+    "name": "Indian Rupee",
+    "decimalPlaces": 2,
+    "inMultiplesOf": 0,
+    "displaySymbol": "₹",
+    "nameCode": "currency.INR",
+    "displayLabel": "Indian Rupee (₹)"
+  },
+  "principal": 34333,
+  "approvedPrincipal": 34333,
+  "proposedPrincipal": 34333,
+  "brokenPeriodInterest": 0,
+  "termFrequency": 6,
+  "termPeriodFrequencyType": {
+    "id": 2,
+    "code": "termFrequency.periodFrequencyType.months",
+    "value": "Months"
+  },
+  "numberOfRepayments": 6,
+  "repaymentEvery": 1,
+  "repaymentFrequencyType": {
+    "id": 2,
+    "code": "repaymentFrequency.periodFrequencyType.months",
+    "value": "Months"
+  },
+  "interestRatePerPeriod": 24,
+  "interestRateFrequencyType": {
+    "id": 3,
+    "code": "interestRateFrequency.periodFrequencyType.years",
+    "value": "Per year"
+  },
+  "annualInterestRate": 24,
+  "isFloatingInterestRate": false,
+  "allowUpfrontCollection": true,
+  "amountForUpfrontCollection": 10283,
+  "amortizationType": {
+    "id": 1,
+    "code": "amortizationType.equal.installments",
+    "value": "Equal installments"
+  },
+  "interestType": {
+    "id": 0,
+    "code": "interestType.declining.balance",
+    "value": "Declining Balance"
+  },
+  "interestCalculationPeriodType": {
+    "id": 1,
+    "code": "interestCalculationPeriodType.same.as.repayment.period",
+    "value": "Same as repayment period"
+  },
+  "allowPartialPeriodInterestCalcualtion": false,
+  "transactionProcessingStrategyId": 6,
+  "transactionProcessingStrategyName": "Interest, Principal, Penalties, Fees Order",
+  "transactionProcessingStrategyCode": "interest-principal-penalties-fees-order-strategy",
+  "syncDisbursementWithMeeting": false,
+  "timeline": {
+    "submittedOnDate": [
+      2025,
+      1,
+      18
+    ],
+    "submittedByUsername": "LOS_API_admin",
+    "submittedByFirstname": "LOS_API_admin",
+    "submittedByLastname": "ADMIN",
+    "expectedDisbursementDate": [
+      2025,
+      1,
+      18
+    ],
+    "expectedMaturityDate": [
+      2025,
+      7,
+      31
+    ]
+  },
+  "repaymentSchedule": {
+    "currency": {
+      "code": "INR",
+      "name": "Indian Rupee",
+      "decimalPlaces": 2,
+      "inMultiplesOf": 0,
+      "displaySymbol": "₹",
+      "nameCode": "currency.INR",
+      "displayLabel": "Indian Rupee (₹)"
+    },
+    "loanTermInDays": 168,
+    "totalPrincipalDisbursed": 34333,
+    "totalPrincipalExpected": 34333,
+    "totalPrincipalPaid": 0,
+    "totalInterestCharged": 1714,
+    "totalFeeChargesCharged": 590,
+    "totalPenaltyChargesCharged": 0,
+    "totalWaived": 0,
+    "totalWrittenOff": 0,
+    "totalRepaymentExpected": 36637,
+    "totalRepayment": 0,
+    "totalPaidInAdvance": 0,
+    "totalPaidLate": 0,
+    "totalOutstanding": 36637,
+    "totalAdvancePayment": 0,
+    "periods": [
+      {
+        "dueDate": [
+          2025,
+          1,
+          18
+        ],
+        "principalDisbursed": 34333,
+        "principalLoanBalanceOutstanding": 34333,
+        "feeChargesDue": 590,
+        "feeChargesOutstanding": 590,
+        "totalOriginalDueForPeriod": 590,
+        "totalDueForPeriod": 590,
+        "totalOutstandingForPeriod": 590,
+        "totalActualCostOfLoanForPeriod": 590,
+        "recalculatedInterestComponent": false
+      },
+      {
+        "period": 1,
+        "fromDate": [
+          2025,
+          1,
+          18
+        ],
+        "dueDate": [
+          2025,
+          1,
+          18
+        ],
+        "complete": false,
+        "daysInPeriod": 0,
+        "principalOriginalDue": 10283,
+        "principalDue": 10283,
+        "principalPaid": 0,
+        "principalWrittenOff": 0,
+        "principalOutstanding": 10283,
+        "principalLoanBalanceOutstanding": 24050,
+        "interestOriginalDue": 0,
+        "interestDue": 0,
+        "interestPaid": 0,
+        "interestWaived": 0,
+        "interestWrittenOff": 0,
+        "interestOutstanding": 0,
+        "feeChargesDue": 0,
+        "feeChargesPaid": 0,
+        "feeChargesWaived": 0,
+        "feeChargesWrittenOff": 0,
+        "feeChargesOutstanding": 0,
+        "penaltyChargesDue": 0,
+        "penaltyChargesPaid": 0,
+        "penaltyChargesWaived": 0,
+        "penaltyChargesWrittenOff": 0,
+        "penaltyChargesOutstanding": 0,
+        "totalOriginalDueForPeriod": 10283,
+        "totalDueForPeriod": 10283,
+        "totalPaidForPeriod": 0,
+        "totalPaidInAdvanceForPeriod": 0,
+        "totalPaidLateForPeriod": 0,
+        "totalWaivedForPeriod": 0,
+        "totalWrittenOffForPeriod": 0,
+        "totalOutstandingForPeriod": 10283,
+        "totalActualCostOfLoanForPeriod": 0,
+        "totalInstallmentAmountForPeriod": 10283,
+        "recalculatedInterestComponent": false,
+        "advancePaymentAmount": 0
+      },
+      {
+        "period": 2,
+        "fromDate": [
+          2025,
+          1,
+          18
+        ],
+        "dueDate": [
+          2025,
+          2,
+          5
+        ],
+        "complete": false,
+        "daysInPeriod": 18,
+        "principalOriginalDue": 3813,
+        "principalDue": 3813,
+        "principalPaid": 0,
+        "principalWrittenOff": 0,
+        "principalOutstanding": 3813,
+        "principalLoanBalanceOutstanding": 20237,
+        "interestOriginalDue": 481,
+        "interestDue": 481,
+        "interestPaid": 0,
+        "interestWaived": 0,
+        "interestWrittenOff": 0,
+        "interestOutstanding": 481,
+        "feeChargesDue": 0,
+        "feeChargesPaid": 0,
+        "feeChargesWaived": 0,
+        "feeChargesWrittenOff": 0,
+        "feeChargesOutstanding": 0,
+        "penaltyChargesDue": 0,
+        "penaltyChargesPaid": 0,
+        "penaltyChargesWaived": 0,
+        "penaltyChargesWrittenOff": 0,
+        "penaltyChargesOutstanding": 0,
+        "totalOriginalDueForPeriod": 4294,
+        "totalDueForPeriod": 4294,
+        "totalPaidForPeriod": 0,
+        "totalPaidInAdvanceForPeriod": 0,
+        "totalPaidLateForPeriod": 0,
+        "totalWaivedForPeriod": 0,
+        "totalWrittenOffForPeriod": 0,
+        "totalOutstandingForPeriod": 4294,
+        "totalActualCostOfLoanForPeriod": 481,
+        "totalInstallmentAmountForPeriod": 4294,
+        "recalculatedInterestComponent": false,
+        "advancePaymentAmount": 0
+      },
+      {
+        "period": 3,
+        "fromDate": [
+          2025,
+          2,
+          5
+        ],
+        "dueDate": [
+          2025,
+          3,
+          5
+        ],
+        "complete": false,
+        "daysInPeriod": 28,
+        "principalOriginalDue": 3889.26,
+        "principalDue": 3889.26,
+        "principalPaid": 0,
+        "principalWrittenOff": 0,
+        "principalOutstanding": 3889.26,
+        "principalLoanBalanceOutstanding": 16347.74,
+        "interestOriginalDue": 404.74,
+        "interestDue": 404.74,
+        "interestPaid": 0,
+        "interestWaived": 0,
+        "interestWrittenOff": 0,
+        "interestOutstanding": 404.74,
+        "feeChargesDue": 0,
+        "feeChargesPaid": 0,
+        "feeChargesWaived": 0,
+        "feeChargesWrittenOff": 0,
+        "feeChargesOutstanding": 0,
+        "penaltyChargesDue": 0,
+        "penaltyChargesPaid": 0,
+        "penaltyChargesWaived": 0,
+        "penaltyChargesWrittenOff": 0,
+        "penaltyChargesOutstanding": 0,
+        "totalOriginalDueForPeriod": 4294,
+        "totalDueForPeriod": 4294,
+        "totalPaidForPeriod": 0,
+        "totalPaidInAdvanceForPeriod": 0,
+        "totalPaidLateForPeriod": 0,
+        "totalWaivedForPeriod": 0,
+        "totalWrittenOffForPeriod": 0,
+        "totalOutstandingForPeriod": 4294,
+        "totalActualCostOfLoanForPeriod": 404.74,
+        "totalInstallmentAmountForPeriod": 4294,
+        "recalculatedInterestComponent": false,
+        "advancePaymentAmount": 0
+      },
+      {
+        "period": 4,
+        "fromDate": [
+          2025,
+          3,
+          5
+        ],
+        "dueDate": [
+          2025,
+          4,
+          5
+        ],
+        "complete": false,
+        "daysInPeriod": 31,
+        "principalOriginalDue": 3967.05,
+        "principalDue": 3967.05,
+        "principalPaid": 0,
+        "principalWrittenOff": 0,
+        "principalOutstanding": 3967.05,
+        "principalLoanBalanceOutstanding": 12380.69,
+        "interestOriginalDue": 326.95,
+        "interestDue": 326.95,
+        "interestPaid": 0,
+        "interestWaived": 0,
+        "interestWrittenOff": 0,
+        "interestOutstanding": 326.95,
+        "feeChargesDue": 0,
+        "feeChargesPaid": 0,
+        "feeChargesWaived": 0,
+        "feeChargesWrittenOff": 0,
+        "feeChargesOutstanding": 0,
+        "penaltyChargesDue": 0,
+        "penaltyChargesPaid": 0,
+        "penaltyChargesWaived": 0,
+        "penaltyChargesWrittenOff": 0,
+        "penaltyChargesOutstanding": 0,
+        "totalOriginalDueForPeriod": 4294,
+        "totalDueForPeriod": 4294,
+        "totalPaidForPeriod": 0,
+        "totalPaidInAdvanceForPeriod": 0,
+        "totalPaidLateForPeriod": 0,
+        "totalWaivedForPeriod": 0,
+        "totalWrittenOffForPeriod": 0,
+        "totalOutstandingForPeriod": 4294,
+        "totalActualCostOfLoanForPeriod": 326.95,
+        "totalInstallmentAmountForPeriod": 4294,
+        "recalculatedInterestComponent": false,
+        "advancePaymentAmount": 0
+      },
+      {
+        "period": 5,
+        "fromDate": [
+          2025,
+          4,
+          5
+        ],
+        "dueDate": [
+          2025,
+          5,
+          5
+        ],
+        "complete": false,
+        "daysInPeriod": 30,
+        "principalOriginalDue": 4046.39,
+        "principalDue": 4046.39,
+        "principalPaid": 0,
+        "principalWrittenOff": 0,
+        "principalOutstanding": 4046.39,
+        "principalLoanBalanceOutstanding": 8334.3,
+        "interestOriginalDue": 247.61,
+        "interestDue": 247.61,
+        "interestPaid": 0,
+        "interestWaived": 0,
+        "interestWrittenOff": 0,
+        "interestOutstanding": 247.61,
+        "feeChargesDue": 0,
+        "feeChargesPaid": 0,
+        "feeChargesWaived": 0,
+        "feeChargesWrittenOff": 0,
+        "feeChargesOutstanding": 0,
+        "penaltyChargesDue": 0,
+        "penaltyChargesPaid": 0,
+        "penaltyChargesWaived": 0,
+        "penaltyChargesWrittenOff": 0,
+        "penaltyChargesOutstanding": 0,
+        "totalOriginalDueForPeriod": 4294,
+        "totalDueForPeriod": 4294,
+        "totalPaidForPeriod": 0,
+        "totalPaidInAdvanceForPeriod": 0,
+        "totalPaidLateForPeriod": 0,
+        "totalWaivedForPeriod": 0,
+        "totalWrittenOffForPeriod": 0,
+        "totalOutstandingForPeriod": 4294,
+        "totalActualCostOfLoanForPeriod": 247.61,
+        "totalInstallmentAmountForPeriod": 4294,
+        "recalculatedInterestComponent": false,
+        "advancePaymentAmount": 0
+      },
+      {
+        "period": 6,
+        "fromDate": [
+          2025,
+          5,
+          5
+        ],
+        "dueDate": [
+          2025,
+          6,
+          5
+        ],
+        "complete": false,
+        "daysInPeriod": 31,
+        "principalOriginalDue": 4127.31,
+        "principalDue": 4127.31,
+        "principalPaid": 0,
+        "principalWrittenOff": 0,
+        "principalOutstanding": 4127.31,
+        "principalLoanBalanceOutstanding": 4206.99,
+        "interestOriginalDue": 166.69,
+        "interestDue": 166.69,
+        "interestPaid": 0,
+        "interestWaived": 0,
+        "interestWrittenOff": 0,
+        "interestOutstanding": 166.69,
+        "feeChargesDue": 0,
+        "feeChargesPaid": 0,
+        "feeChargesWaived": 0,
+        "feeChargesWrittenOff": 0,
+        "feeChargesOutstanding": 0,
+        "penaltyChargesDue": 0,
+        "penaltyChargesPaid": 0,
+        "penaltyChargesWaived": 0,
+        "penaltyChargesWrittenOff": 0,
+        "penaltyChargesOutstanding": 0,
+        "totalOriginalDueForPeriod": 4294,
+        "totalDueForPeriod": 4294,
+        "totalPaidForPeriod": 0,
+        "totalPaidInAdvanceForPeriod": 0,
+        "totalPaidLateForPeriod": 0,
+        "totalWaivedForPeriod": 0,
+        "totalWrittenOffForPeriod": 0,
+        "totalOutstandingForPeriod": 4294,
+        "totalActualCostOfLoanForPeriod": 166.69,
+        "totalInstallmentAmountForPeriod": 4294,
+        "recalculatedInterestComponent": false,
+        "advancePaymentAmount": 0
+      },
+      {
+        "period": 7,
+        "fromDate": [
+          2025,
+          6,
+          5
+        ],
+        "dueDate": [
+          2025,
+          7,
+          5
+        ],
+        "complete": false,
+        "daysInPeriod": 30,
+        "principalOriginalDue": 4206.99,
+        "principalDue": 4206.99,
+        "principalPaid": 0,
+        "principalWrittenOff": 0,
+        "principalOutstanding": 4206.99,
+        "principalLoanBalanceOutstanding": 0,
+        "interestOriginalDue": 87.01,
+        "interestDue": 87.01,
+        "interestPaid": 0,
+        "interestWaived": 0,
+        "interestWrittenOff": 0,
+        "interestOutstanding": 87.01,
+        "feeChargesDue": 0,
+        "feeChargesPaid": 0,
+        "feeChargesWaived": 0,
+        "feeChargesWrittenOff": 0,
+        "feeChargesOutstanding": 0,
+        "penaltyChargesDue": 0,
+        "penaltyChargesPaid": 0,
+        "penaltyChargesWaived": 0,
+        "penaltyChargesWrittenOff": 0,
+        "penaltyChargesOutstanding": 0,
+        "totalOriginalDueForPeriod": 4294,
+        "totalDueForPeriod": 4294,
+        "totalPaidForPeriod": 0,
+        "totalPaidInAdvanceForPeriod": 0,
+        "totalPaidLateForPeriod": 0,
+        "totalWaivedForPeriod": 0,
+        "totalWrittenOffForPeriod": 0,
+        "totalOutstandingForPeriod": 4294,
+        "totalActualCostOfLoanForPeriod": 87.01,
+        "totalInstallmentAmountForPeriod": 4294,
+        "recalculatedInterestComponent": false,
+        "advancePaymentAmount": 0
+      }
+    ]
+  },
+  "charges": [
+    {
+      "id": 226403,
+      "chargeId": 25,
+      "name": "Processing Fee-new offline",
+      "chargeTimeType": {
+        "id": 1,
+        "code": "chargeTimeType.disbursement",
+        "value": "Disbursement"
+      },
+      "chargeCalculationType": {
+        "id": 2,
+        "code": "chargeCalculationType.percent.of.amount",
+        "value": "% Approved Amount"
+      },
+      "percentage": 1.18,
+      "amountPercentageAppliedTo": 34333,
+      "currency": {
+        "code": "INR",
+        "name": "Indian Rupee",
+        "decimalPlaces": 2,
+        "displaySymbol": "₹",
+        "nameCode": "currency.INR",
+        "displayLabel": "Indian Rupee (₹)"
+      },
+      "amount": 590,
+      "amountPaid": 0,
+      "amountWaived": 0,
+      "amountWrittenOff": 0,
+      "amountOutstanding": 590,
+      "amountOrPercentage": 1.18,
+      "penalty": false,
+      "chargePaymentMode": {
+        "id": 0,
+        "code": "chargepaymentmode.regular",
+        "value": "Regular"
+      },
+      "paid": false,
+      "waived": false,
+      "chargePayable": false,
+      "minCap": 590,
+      "isGlimCharge": false,
+      "isCapitalized": false,
+      "taxGroupId": 2,
+      "isMandatory": false,
+      "loanChargeTaxDetailsPaidByDatas": [],
+      "slabs": [
+        {
+          "id": 0,
+          "type": {
+            "id": 0,
+            "code": "slabChargeType.installment.invalid",
+            "value": "INVALID"
+          },
+          "subSlabs": []
+        }
+      ],
+      "isSlabBased": false,
+      "decimalPlaces": 0,
+      "chargeCategoryType": {
+        "id": 1,
+        "code": "chargeCategoryType.processing_fees",
+        "value": "processingFee"
+      },
+      "isAmountNonEditable": false,
+      "discountData": {},
+      "isUpdateThroughDiscount": false,
+      "isAccruable": true,
+      "canLendCharge": false,
+      "canAddChargeToPrincipalForComputation": false
+    }
+  ],
+  "meeting": {
+    "id": 31409,
+    "calendarInstanceId": 31409,
+    "entityId": 31588,
+    "entityType": {
+      "id": 3,
+      "code": "calendarEntityType.loans",
+      "value": "LOANS"
+    },
+    "title": "loan_schedule_31588",
+    "startDate": [
+      2025,
+      1,
+      18
+    ],
+    "duration": 0,
+    "type": {
+      "id": 1,
+      "code": "calendarType.collection",
+      "value": "COLLECTION"
+    },
+    "repeating": true,
+    "recurrence": "FREQ=MONTHLY;BYMONTHDAY=5",
+    "frequency": {
+      "id": 3,
+      "code": "calendarFrequencyType.monthly",
+      "value": "MONTHLY"
+    },
+    "interval": 1,
+    "repeatsOnNthDayOfMonth": {
+      "id": -2,
+      "code": "nthDayType.onday",
+      "value": "ONDAY"
+    },
+    "firstReminder": 0,
+    "secondReminder": 0,
+    "humanReadable": "Monthly on day 5",
+    "createdDate": [
+      2025,
+      1,
+      18
+    ],
+    "lastUpdatedDate": [
+      2025,
+      1,
+      18
+    ],
+    "createdByUserId": 51,
+    "createdByUsername": "LOS_API_admin",
+    "lastUpdatedByUserId": 51,
+    "lastUpdatedByUsername": "LOS_API_admin",
+    "repeatsOnDayOfMonth": [
+      5
+    ]
+  },
+  "feeChargesAtDisbursementCharged": 590,
+  "multiDisburseLoan": false,
+  "canDefineInstallmentAmount": false,
+  "canDisburse": false,
+  "emiAmountVariations": [],
+  "canUseForTopup": false,
+  "isTopup": false,
+  "inArrears": false,
+  "isNPA": false,
+  "overdueCharges": [
+    {
+      "id": 53397,
+      "productLoanId": 11,
+      "chargeData": {
+        "id": 3,
+        "name": "Bounce Charge",
+        "active": true,
+        "penalty": true,
+        "currency": {
+          "code": "INR",
+          "name": "Indian Rupee",
+          "decimalPlaces": 2,
+          "displaySymbol": "₹",
+          "nameCode": "currency.INR",
+          "displayLabel": "Indian Rupee (₹)"
+        },
+        "amount": 590,
+        "chargeTimeType": {
+          "id": 9,
+          "code": "chargeTimeType.overdueInstallment",
+          "value": "Overdue Fees"
+        },
+        "chargeAppliesTo": {
+          "id": 1,
+          "code": "chargeAppliesTo.loan",
+          "value": "Loan"
+        },
+        "chargeCalculationType": {
+          "id": 1,
+          "code": "chargeCalculationType.flat",
+          "value": "Flat"
+        },
+        "chargePaymentMode": {
+          "id": 0,
+          "code": "chargepaymentmode.regular",
+          "value": "Regular"
+        },
+        "emiRoundingGoalSeek": false,
+        "isGlimCharge": false,
+        "slabs": [],
+        "isCapitalized": false,
+        "isSlabBased": false,
+        "isCollectedAsCash": false,
+        "isUpdateThroughDiscount": false
+      },
+      "isMandatory": false,
+      "isAmountNonEditable": false,
+      "overdueBasedOn": {
+        "id": 2,
+        "code": "overdueBasedOn.principal.and.interest",
+        "value": "Principal And Interest"
+      },
+      "canLendCharge": false,
+      "canAddChargeToPrincipalForComputation": false
+    },
+    {
+      "id": 53398,
+      "productLoanId": 11,
+      "chargeData": {
+        "id": 9,
+        "name": "Late Penal - Interest Charge",
+        "active": true,
+        "penalty": true,
+        "currency": {
+          "code": "INR",
+          "name": "Indian Rupee",
+          "decimalPlaces": 2,
+          "displaySymbol": "₹",
+          "nameCode": "currency.INR",
+          "displayLabel": "Indian Rupee (₹)"
+        },
+        "amount": 28.32,
+        "chargeTimeType": {
+          "id": 9,
+          "code": "chargeTimeType.overdueInstallment",
+          "value": "Overdue Fees"
+        },
+        "chargeAppliesTo": {
+          "id": 1,
+          "code": "chargeAppliesTo.loan",
+          "value": "Loan"
+        },
+        "chargeCalculationType": {
+          "id": 3,
+          "code": "chargeCalculationType.percent.of.amount.and.interest",
+          "value": "% Loan Amount + Interest"
+        },
+        "chargePaymentMode": {
+          "id": 0,
+          "code": "chargepaymentmode.regular",
+          "value": "Regular"
+        },
+        "feeInterval": 1,
+        "feeFrequency": {
+          "id": 0,
+          "code": "periodFrequencyType.days",
+          "value": "Days"
+        },
+        "emiRoundingGoalSeek": false,
+        "isGlimCharge": false,
+        "slabs": [],
+        "isCapitalized": false,
+        "isSlabBased": false,
+        "isCollectedAsCash": false,
+        "isUpdateThroughDiscount": false
+      },
+      "isMandatory": false,
+      "isAmountNonEditable": false,
+      "canLendCharge": false,
+      "canAddChargeToPrincipalForComputation": false
+    }
+  ],
+  "daysInMonthType": {
+    "id": 30,
+    "code": "DaysInMonthType.days360",
+    "value": "30 Days"
+  },
+  "daysInYearType": {
+    "id": 360,
+    "code": "DaysInYearType.days360",
+    "value": "360 Days"
+  },
+  "isInterestRecalculationEnabled": false,
+  "createStandingInstructionAtDisbursement": false,
+  "isVariableInstallmentsAllowed": false,
+  "minimumGap": 0,
+  "maximumGap": 0,
+  "brokenPeriodMethodType": {
+    "id": 4,
+    "code": "brokenPeriodMethod.emi.plush.broken.period.interest",
+    "value": "EMI + Broken Period Interest"
+  },
+  "considerFutureDisbursmentsInSchedule": false,
+  "considerAllDisbursementsInSchedule": false,
+  "calculatedEmiAmount": 4294,
+  "isLocked": false,
+  "clientOfficeName": "Head Office",
+  "deferPaymentsForHalfTheLoanTerm": false,
+  "isClientVerified": false,
+  "allowsDisbursementToGroupBankAccounts": false,
+  "isDpConfigured": false,
+  "productInterestRatePerPeriod": 21,
+  "productInterestRateFrequencyType": {
+    "id": 3,
+    "code": "interestRateFrequency.periodFrequencyType.years",
+    "value": "Per year"
+  },
+  "productAnnualInterestRate": 21,
+  "brokenPeriodInterestCollectAtDisbursement": false,
+  "noOfAdvEmiCollection": 1,
+  "isUpfrontInterestEnabled": false,
+  "eventBasedCharges": [
+    {
+      "id": 32893,
+      "chargeId": 7,
+      "name": "Pre-Closure Charge",
+      "chargeEventType": {
+        "id": 1,
+        "code": "chargeEventsType.loan_foreclosure",
+        "value": "Loan Foreclosure"
+      },
+      "amount": 590,
+      "chargeCalculationType": {
+        "id": 1,
+        "code": "chargeCalculationType.flat",
+        "value": "Flat"
+      },
+      "paymentMode": {
+        "id": 0,
+        "code": "chargepaymentmode.regular",
+        "value": "Regular"
+      },
+      "penalty": false,
+      "isSlabBased": true,
+      "minValue": 8,
+      "maxValue": 365,
+      "type": {
+        "id": 3,
+        "code": "slabChargeType.tenure.in.days",
+        "value": "Tenure In Days"
+      },
+      "currency": {
+        "code": "INR",
+        "name": "Indian Rupee",
+        "decimalPlaces": 2,
+        "displaySymbol": "₹",
+        "nameCode": "currency.INR",
+        "displayLabel": "Indian Rupee (₹)"
+      },
+      "slabAmount": 354,
+      "slabs": [
+        {
+          "id": 32893,
+          "minValue": 8,
+          "maxValue": 365,
+          "amount": 354,
+          "type": {
+            "id": 3,
+            "code": "slabChargeType.tenure.in.days",
+            "value": "Tenure In Days"
+          },
+          "subSlabs": []
+        },
+        {
+          "id": 32893,
+          "minValue": 0,
+          "maxValue": 7,
+          "amount": 0,
+          "type": {
+            "id": 3,
+            "code": "slabChargeType.tenure.in.days",
+            "value": "Tenure In Days"
+          },
+          "subSlabs": []
+        }
+      ]
+    },
+    {
+      "id": 32894,
+      "chargeId": 8,
+      "name": "Pre-Closure Penalty",
+      "chargeEventType": {
+        "id": 1,
+        "code": "chargeEventsType.loan_foreclosure",
+        "value": "Loan Foreclosure"
+      },
+      "amount": 2.36,
+      "chargeCalculationType": {
+        "id": 9,
+        "code": "chargeCalculartionType.percent.of.principal.outstanding",
+        "value": "% Of Principal Outstanding"
+      },
+      "paymentMode": {
+        "id": 0,
+        "code": "chargepaymentmode.regular",
+        "value": "Regular"
+      },
+      "penalty": false,
+      "isSlabBased": true,
+      "minValue": 0,
+      "maxValue": 7,
+      "type": {
+        "id": 3,
+        "code": "slabChargeType.tenure.in.days",
+        "value": "Tenure In Days"
+      },
+      "currency": {
+        "code": "INR",
+        "name": "Indian Rupee",
+        "decimalPlaces": 2,
+        "displaySymbol": "₹",
+        "nameCode": "currency.INR",
+        "displayLabel": "Indian Rupee (₹)"
+      },
+      "slabAmount": 0,
+      "slabs": [
+        {
+          "id": 32894,
+          "minValue": 0,
+          "maxValue": 7,
+          "amount": 0,
+          "type": {
+            "id": 3,
+            "code": "slabChargeType.tenure.in.days",
+            "value": "Tenure In Days"
+          },
+          "subSlabs": []
+        },
+        {
+          "id": 32894,
+          "minValue": 8,
+          "maxValue": 365,
+          "amount": 2.36,
+          "type": {
+            "id": 3,
+            "code": "slabChargeType.tenure.in.days",
+            "value": "Tenure In Days"
+          },
+          "subSlabs": []
+        }
+      ]
+    }
+  ],
+  "discountTypeOptions": [
+    {
+      "id": 1,
+      "code": "chargeDiscountCalculationType.discountInAmount",
+      "value": "Discount in Amount"
+    },
+    {
+      "id": 2,
+      "code": "chargeCalculationType.discountInPercentage",
+      "value": "Discount in Percentage"
+    }
+  ],
+  "actualNumberOfRepayments": 7,
+  "loanOfficeName": "Head Office",
+  "loanOfficeId": 1,
+  "loanOfficeHierarchy": "."
+}
